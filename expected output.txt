@@ -1,0 +1,53 @@
+The following is the expected output if
+ant test
+is run:
+
+checkJLexNeeded:
+JLex:
+checkCupNeeded:
+Cup:
+checkASTNeeded:
+AST:
+    [javac] Compiling 1 source file to /Users/charlesfischer/Documents/536 fall 2013/eclipse/cs 536 project 5/bin
+compile:
+test:
+   [concat] {
+   [concat] 	int a;
+   [concat] 	int b;
+   [concat] 	a  = 123;
+   [concat] 	b  = 456;
+   [concat] 	
+   [concat] 	a= a+a;
+   [concat] 	print( a+b-100);
+   [concat] }
+     [java] Begin CSX compilation of test.lite.
+     [java] CSX program parsed correctly.
+     [java] CSX compilation successfully completed.
+     [java] Translated program is in test.j.
+   [concat] 	; CSX Lite program translated into Java bytecodes (Jasmin format)
+   [concat] 	.class	public  test
+   [concat] 	.super	java/lang/Object
+   [concat] 	.method	 public static  main([Ljava/lang/String;)V
+   [concat] 	.limit	locals  2
+   [concat] 	ldc	123
+   [concat] 	istore	0
+   [concat] 	ldc	456
+   [concat] 	istore	1
+   [concat] 	iload	0
+   [concat] 	iload	0
+   [concat] 	iadd
+   [concat] 	istore	0
+   [concat] 	iload	0
+   [concat] 	iload	1
+   [concat] 	iadd
+   [concat] 	ldc	100
+   [concat] 	isub
+   [concat] 	invokestatic	 CSXLib/printInt(I)V
+   [concat] 	return
+   [concat] 	.limit	stack  10
+   [concat] 	.end	method
+     [java] Generated: test.class
+     [move] Moving 1 file to /Users/charlesfischer/Documents/536 fall 2013/eclipse/cs 536 project 5/bin
+     [java] 602
+BUILD SUCCESSFUL
+Total time: 6 seconds
